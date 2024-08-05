@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import PrimarySearchAppBar from "./Navbarmui";
+import MiniDrawer from "./sidebarmui";
+import Content from "./Content";
+import Grid from '@mui/material/Grid';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <PrimarySearchAppBar />
+    <div className="container-fluid">
+      <div className="row">         
+        <div className="col-12 d-flex">
+        <MiniDrawer/>
+        <Content />
+        </div>
+      </div>
     </div>
+    </>
   );
 }
 
